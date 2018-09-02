@@ -1,0 +1,12 @@
+<h2>Gestion des QCM</h2>
+<button class="btn btn-success" 
+        [disabled]="!isAuth" 
+        (click)="onCreerQcm()">Créer un QCM</button>
+<button class="btn btn-info"
+        (click)="onSendQcm()">Envoyer un QCM</button>
+<ul class="list-group">
+  <app-teacher-manage-qcm-item *ngFor="let qcm of qcms"
+                                [qcmId]="qcm.id"
+                                [qcmTitle]="qcm.title"
+                                [qcmTime]="qcm.time"></app-teacher-manage-qcm-item>
+</ul>

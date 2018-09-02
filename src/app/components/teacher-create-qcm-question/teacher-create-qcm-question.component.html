@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item': true,
+                  'list-group-item-success': getQuestionId() === 2 }">
+  <div style="width:20px;height:20px;background-color:red" *ngIf="getQuestionId()===2"></div>
+  <h3 [ngStyle]="{color: getColor()}">{{ getQuestionId() }}) {{ questionTitle }}</h3>
+  <app-teacher-create-qcm-answer></app-teacher-create-qcm-answer>
+  <app-teacher-create-qcm-answer></app-teacher-create-qcm-answer>
+  <app-teacher-create-qcm-answer></app-teacher-create-qcm-answer>
+  <p>
+    <button class="btn btn-success" (click)="onAddAnswer()">+</button>
+    <input type="text" placeholder="Ajouter une réponse">
+  </p>
+</li>

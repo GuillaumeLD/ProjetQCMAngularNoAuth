@@ -1,0 +1,7 @@
+<li class="list-group-item">
+  <h5>QCM n° {{ getQcmId() }}</h5>
+  <p>Titre : {{ qcmTitle }}</p>
+  <p>Durée : {{ qcmTime }} min</p>
+  <button class="btn btn-warning" (click)="onEditQcm()">Modifier</button>
+  <button class="btn btn-danger" (click)="onDeleteQcm()">Supprimer</button>
+</li>

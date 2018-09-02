@@ -1,0 +1,22 @@
+<h2>Création du QCM</h2>
+<p>Date du jour : {{ dayDate | async | date: "dd/MM/y (hh:mm)" }} </p>
+<ul class="list-group">
+  <app-teacher-create-qcm-question *ngFor="let question of questions"
+                                    [questionId]="question.id"
+                                    [questionTitle]="question.title"></app-teacher-create-qcm-question>
+</ul>
+<p>
+    <button class="btn btn-success" (click)="onAddQuestion()">+</button>
+    <input type="text"
+            [(ngModel)]="qcmQuestion"
+            placeholder="Ajouter une question">
+</p>
+<p>
+    <label for="">Question prête à être ajoutée : {{ qcmQuestion }}</label>
+</p>
+<p>
+    <label for="">Définir un temps de réponse : </label>
+    <input type="text">
+</p>
+<button class="btn btn-success" (click)="onValidQcm()">Valider QCM</button>
+
