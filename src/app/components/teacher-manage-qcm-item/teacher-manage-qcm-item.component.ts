@@ -22,8 +22,8 @@ export class TeacherManageQcmItemComponent implements OnInit {
     return this.qcmId;
   }
 
-  onEditQcm() {
-    this.teacherManageQcmService.editQcm();
+  onEditQcm(qcmId: number) {
+    this.teacherManageQcmService.editQcm(qcmId);
   }
 
   onDeleteQcm() {

@@ -2,6 +2,7 @@
   <h5>QCM n° {{ getQcmId() }}</h5>
   <p>Titre : {{ qcmTitle }}</p>
   <p>Durée : {{ qcmTime }} min</p>
-  <button class="btn btn-warning" (click)="onEditQcm()">Modifier</button>
+  <a [routerLink]="qcmId">Modifier</a>
+  <button class="btn btn-warning" (click)="onEditQcm(qcmId)">Modifier</button>
   <button class="btn btn-danger" (click)="onDeleteQcm()">Supprimer</button>
-</li>
+</li> 

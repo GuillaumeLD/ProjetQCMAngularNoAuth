@@ -18,6 +18,14 @@ export class TeacherManageQcmService {
         }
     ];
 
+    getQcmById(id: number) {
+        const qcm = this.qcms.find(
+            (qcmObject) => {
+                return qcmObject.id === id;
+            }
+        );
+        return qcm;
+    }
 
     creerQcm() {
         console.log("On va créer un QCM");
@@ -27,8 +35,8 @@ export class TeacherManageQcmService {
         console.log("On va envoyer un QCM");
     }
 
-    editQcm() {
-        console.log("On va modifier un QCM");
+    editQcm(qcmId: number) {
+        console.log("On va modifier le QCM qui a pour id : " + qcmId);
     }
 
     deleteQcm() {

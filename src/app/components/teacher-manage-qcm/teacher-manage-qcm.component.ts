@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TeacherManageQcmService } from '../../services/teacher-manage-qcm-service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-teacher-manage-qcm',

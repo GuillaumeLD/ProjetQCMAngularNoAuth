@@ -10,14 +10,17 @@ import { TeacherCreateQcmComponent } from './components/teacher-create-qcm/teach
 import { TeacherCreateQcmQuestionComponent } from './components/teacher-create-qcm-question/teacher-create-qcm-question.component';
 import { TeacherCreateQcmAnswerComponent } from './components/teacher-create-qcm-answer/teacher-create-qcm-answer.component';
 
+import { AuthService } from './services/auth.service';
 import { TeacherManageQcmService } from './services/teacher-manage-qcm-service';
 import { TeacherCreateQcmService } from './services/teacher-create-qcm.service';
+import { TeacherEditQcmComponent } from './components/teacher-edit-qcm/teacher-edit-qcm.component';
 
 import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: "auth", component: AuthComponent },
   { path: "manageqcm", component: TeacherManageQcmComponent },
+  { path: "manageqcm/:id", component: TeacherEditQcmComponent },
   { path: "createqcm", component: TeacherCreateQcmComponent },
   { path: "", component: TeacherManageQcmComponent }
 ];
@@ -30,7 +33,8 @@ const appRoutes: Routes = [
     TeacherCreateQcmComponent,
     TeacherCreateQcmQuestionComponent,
     TeacherCreateQcmAnswerComponent,
-    AuthComponent
+    AuthComponent,
+    TeacherEditQcmComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
+    AuthService,
     TeacherManageQcmService,
     TeacherCreateQcmService
   ],
